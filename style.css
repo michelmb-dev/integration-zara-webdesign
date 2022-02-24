@@ -1,12 +1,65 @@
-/* BASE */
 @import "./css/reset.css";
 
 body {
-	font-family: "Brygada 1918", serif;
-	font-size: 14px;
+	font-family: "Source Serif Pro", serif;
+	font-size: 100%;
 	line-height: 1.5;
 	color: #000;
 	background: #eaeaea;
 	margin-left: 20px;
 	margin-right: 20px;
+}
+
+/* MAIN */
+.main__container {
+	max-width: 1440px;
+	margin-top: 1.5rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* HEADER */
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__logo {
+	width: 100%;
+	height: 100%;
+	max-width: 95px;
+}
+
+.header__nav {
+	flex: none;
+}
+
+.header__nav__link {
+	padding: 0 1em;
+	color: inherit;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: -0.02em;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.header__nav__link--cart {
+	background: black;
+	padding: 0.8em;
+	color: white;
+}
+
+@media screen and (max-width: 700px) {
+	.header {
+		flex-direction: column;
+	}
+	.header__nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 1em;
+		flex-wrap: wrap;
+	}
 }
