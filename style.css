@@ -53,16 +53,15 @@ body {
 
 /* HERO */
 .hero {
-	position: relative;
 	width: 100%;
 	height: 646px;
 	margin-top: 80px;
+	display: flex;
 }
 
 .hero__content {
 	padding: 1rem;
 	max-width: 50vw;
-	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -89,58 +88,96 @@ body {
 	letter-spacing: 0.03em;
 }
 
-.hero__img__1 {
+.hero__imgs {
+	width: 100%;
+	position: relative;
+}
+
+.hero__imgs__1 {
 	position: absolute;
-	object-fit: cover;
 	top: 0;
-	right: 300px;
+	right: 380px;
 	z-index: -1;
 	max-width: 407px;
 	width: 100%;
 }
 
-.hero__img__2 {
-	object-fit: cover;
+.hero__imgs__2 {
 	position: absolute;
 	top: 80px;
-	right: 0;
+	right: 40px;
 	z-index: -1;
 	max-width: 407px;
 	width: 100%;
 }
 
-.hero__img__1 img,
-.hero__img__2 img {
+.hero__imgs__1 img,
+.hero__imgs__2 img {
 	box-shadow: 1px 0 15px rgba(165, 165, 165, 0.589);
 }
 
 @media screen and (max-width: 840px) {
+	/* HEADER */
 	.header {
 		flex-direction: column;
 	}
+
+	.header__nav__link {
+		font-size: 1rem;
+	}
+
 	.header__nav {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-top: 1em;
+		margin-top: 1.5rem;
 		flex-wrap: wrap;
 	}
+
+	/* HERO */
+	.hero {
+		flex-direction: column-reverse;
+		height: 100%;
+		margin-top: 40px;
+	}
+
 	.hero__content {
 		min-width: 100%;
 		align-items: center;
-		justify-content: flex-start;
 		text-align: center;
-		gap: 2em;
+		gap: 1em;
+		padding: 1em;
+		transform: translateY(-80px);
 	}
-	.hero__img__1 {
-		top: 25%;
-		left: 10%;
-		right: 0;
-		max-width: 307px;
+
+	.hero__content__title {
+		font-size: 12vw;
+		margin-bottom: 1rem;
+		max-width: 60vw;
 	}
-	.hero__img__2 {
-		top: 70%;
-		right: 10%;
-		max-width: 207px;
+
+	.hero__content__subtitle {
+		font-size: 1.5rem;
+	}
+
+	.hero__content__description {
+		font-size: 1em;
+	}
+
+	.hero__imgs {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: -1;
+	}
+
+	.hero__imgs__1 {
+		position: static;
+		margin-left: 20px;
+	}
+
+	.hero__imgs__2 {
+		position: static;
+		transform: translateX(-20px);
 	}
 }
