@@ -2,7 +2,7 @@
 
 body {
 	font-family: "Source Serif Pro", serif;
-	font-size: 100%;
+	font-size: 14px;
 	line-height: 1.5;
 	color: #000;
 	background: #eaeaea;
@@ -51,7 +51,70 @@ body {
 	color: white;
 }
 
-@media screen and (max-width: 700px) {
+/* HERO */
+.hero {
+	position: relative;
+	width: 100%;
+	height: 646px;
+	margin-top: 80px;
+}
+
+.hero__content {
+	padding: 1rem;
+	max-width: 50vw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.hero__content__title {
+	font-size: 8vw;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 90%;
+	letter-spacing: 0.02em;
+}
+
+.hero__content__subtitle {
+	font-size: 4vw;
+	line-height: 110%;
+	letter-spacing: 0.03em;
+}
+
+.hero__content__description {
+	max-width: 450px;
+	font-size: 1.5em;
+	line-height: 130%;
+	letter-spacing: 0.03em;
+}
+
+.hero__img__1 {
+	position: absolute;
+	object-fit: cover;
+	top: 0;
+	right: 300px;
+	z-index: -1;
+	max-width: 407px;
+	width: 100%;
+}
+
+.hero__img__2 {
+	object-fit: cover;
+	position: absolute;
+	top: 80px;
+	right: 0;
+	z-index: -1;
+	max-width: 407px;
+	width: 100%;
+}
+
+.hero__img__1 img,
+.hero__img__2 img {
+	box-shadow: 1px 0 15px rgba(165, 165, 165, 0.589);
+}
+
+@media screen and (max-width: 840px) {
 	.header {
 		flex-direction: column;
 	}
@@ -61,5 +124,23 @@ body {
 		justify-content: center;
 		margin-top: 1em;
 		flex-wrap: wrap;
+	}
+	.hero__content {
+		min-width: 100%;
+		align-items: center;
+		justify-content: flex-start;
+		text-align: center;
+		gap: 2em;
+	}
+	.hero__img__1 {
+		top: 25%;
+		left: 10%;
+		right: 0;
+		max-width: 307px;
+	}
+	.hero__img__2 {
+		top: 70%;
+		right: 10%;
+		max-width: 207px;
 	}
 }
